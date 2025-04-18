@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Header() {
     return (
-        <div className="relative px-4 sm:px-6 lg:px-8">
+        <div className="relative px-4 sm:px-6 lg:px-8 fade-in">
             <DotPattern
                 className={cn(
                     "absolute inset-0 -z-10 [mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
@@ -31,7 +31,7 @@ export default function Header() {
                         </div>
                     </div>
                     <div className="text-center px-2">
-                        <h1 className="text-3xl sm:text-4xl lg:text-6xl font-extrabold tracking-tight text-dark max-w-3xl mx-auto">
+                        <h1 className="text-3xl sm:text-4xl lg:text-6xl font-extrabold tracking-tight text-dark max-w-3xl mx-auto leading-tight">
                             Votre Serveur Minecraft Open-Source
                         </h1>
                         <p className="mt-4 leading-7 text-base sm:text-lg max-w-xl mx-auto tracking-tight text-muted-foreground">
@@ -81,7 +81,7 @@ export default function Header() {
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background pointer-events-none" />
                 </div>
 
-                <section className="flex flex-col items-center justify-center py-16 w-full px-4">
+                <section className="flex flex-col items-center justify-center py-16 w-full px-4 slide-in">
                     <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-center">
                         Quelques Chiffres Clés
                     </h2>

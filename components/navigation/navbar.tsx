@@ -37,7 +37,7 @@ export default function Navbar() {
         <div className="flex justify-center w-full h-full">
             <div
                 className={`fixed top-0 z-50 p-4 bg-primary/70 dark:bg-primary/10 text-white flex items-center justify-between
-                    transition-all duration-500 ease-[cubic-bezier(4,0,2,1)] will-change-transform
+                    transition-all duration-500 ease-[cubic-bezier(4,0,2,1)] will-change-transform fade-in
                     ${isScrolled || menuOpen
                         ? `w-full backdrop-blur-2xl scale-100 translate-y-0 rounded-none ${menuOpen ? "" : "shadow-lg"}`
                         : "max-w-screen-2xl w-full rounded-2xl mt-4 scale-95 translate-y-2 shadow-none"
@@ -52,7 +52,7 @@ export default function Navbar() {
                     {NAVBAR_LINKS.map((link) => (
                         <div
                             key={link.href}
-                            className="text-white px-2 py-0.5 rounded-md hover:bg-black/40 border border-transparent hover:border-white/10 relative group transition-all duration-300 ease-in-out"
+                            className="text-white px-2 py-0.5 rounded-md hover:bg-black/40 border border-transparent hover:border-white/10 relative group transition-all duration-300 ease-in-out slide-in"
                         >
                             <Link
                                 href={link.href}
@@ -106,7 +106,7 @@ export default function Navbar() {
                                     target={link.external ? "_blank" : undefined}
                                     className="text-white py-3 px-5 rounded-lg active:bg-black/30 focus:bg-black/40 
                                     transition-all duration-200 font-medium border border-white/10 
-                                    active:border-white/20 active:scale-[1.02]"
+                                    active:border-white/20 active:scale-[1.02] slide-in"
                                     onClick={() => setMenuOpen(false)}
                                 >
                                     {link.label}

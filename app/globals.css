@@ -52,13 +52,13 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: #f47796;
+  --primary: #ff6f61; /* Updated to a more vibrant color */
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
+  --accent: #ffcc00; /* Updated to a more vibrant color */
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
@@ -119,6 +119,8 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-geist-sans);
+    font-size: 1rem; /* Improved font style for better readability */
+    line-height: 1.5; /* Improved font style for better readability */
   }
 }
 
@@ -132,6 +134,32 @@
   60% {
     background-position: calc(100% + var(--shiny-width)) 0;
   }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.fade-in {
+  animation: fade-in 1s ease-in-out;
+}
+
+.slide-in {
+  animation: slide-in 1s ease-in-out;
 }
 
 .heart-icon {
