@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Header() {
     return (
-        <div className="relative px-4 sm:px-6 lg:px-8">
+        <div className="relative px-4 sm:px-6 lg:px-8 fade-in">
             <DotPattern
                 className={cn(
                     "absolute inset-0 -z-10 [mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
@@ -81,7 +81,7 @@ export default function Header() {
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background pointer-events-none" />
                 </div>
 
-                <section className="flex flex-col items-center justify-center py-16 w-full px-4">
+                <section className="flex flex-col items-center justify-center py-16 w-full px-4 slide-in">
                     <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-center">
                         Quelques Chiffres Clés
                     </h2>
