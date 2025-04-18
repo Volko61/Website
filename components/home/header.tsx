@@ -38,13 +38,15 @@ export default function Header() {
                             OpenMC est un projet communautaire open-source dédié à la création d&apos;un serveur Minecraft innovant et collaboratif.
                         </p>
                         <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center items-center">
-                            <Button className="group w-full sm:w-auto">
-                                Rejoindre le Serveur
-                                <ArrowRightIcon
-                                    className="-me-1 opacity-60 transition-transform group-hover:translate-x-0.5"
-                                    size={16}
-                                    aria-hidden="true"
-                                />
+                            <Button className="group w-full sm:w-auto" asChild>
+                                <Link href="/join-server">
+                                    Rejoindre le Serveur
+                                    <ArrowRightIcon
+                                        className="-me-1 opacity-60 transition-transform group-hover:translate-x-0.5"
+                                        size={16}
+                                        aria-hidden="true"
+                                    />
+                                </Link>
                             </Button>
                             <Button variant="secondary" className="group w-full sm:w-auto" asChild>
                                 <Link href="https://github.com/ServerOpenMC/" target="_blank" className="flex items-center">

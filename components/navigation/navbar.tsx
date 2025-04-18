@@ -65,12 +65,14 @@ export default function Navbar() {
                     ))}
                 </div>
                 <div className="hidden md:flex">
-                    <Button className="group">
-                        Rejoindre le Serveur
-                        <ArrowRightIcon
-                            className="-me-1 opacity-60 transition-transform group-hover:translate-x-0.5"
-                            size={16}
-                        />
+                    <Button className="group" asChild>
+                        <Link href="/join-server">
+                            Rejoindre le Serveur
+                            <ArrowRightIcon
+                                className="-me-1 opacity-60 transition-transform group-hover:translate-x-0.5"
+                                size={16}
+                            />
+                        </Link>
                     </Button>
                 </div>
 
@@ -119,12 +121,15 @@ export default function Navbar() {
                                 className="w-full group py-6 text-base mt-2 bg-white/10 active:bg-white/20
                                 border border-white/20 active:border-white/30 transition-all duration-300"
                                 onClick={() => setMenuOpen(false)}
+                                asChild
                             >
-                                Rejoindre le Serveur
-                                <ArrowRightIcon
-                                    className="-me-1 ml-2 opacity-60 transition-transform group-active:translate-x-1"
-                                    size={18}
-                                />
+                                <Link href="/join-server">
+                                    Rejoindre le Serveur
+                                    <ArrowRightIcon
+                                        className="-me-1 ml-2 opacity-60 transition-transform group-active:translate-x-1"
+                                        size={18}
+                                    />
+                                </Link>
                             </Button>
                         </nav>
                     </div>
